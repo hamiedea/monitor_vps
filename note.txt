@@ -1,0 +1,19 @@
+# persiapan
+sudo apt update && sudo apt upgrade -y && sudo apt install python3-pip screen -y
+
+# buat folder dan masuk
+mkdir monitor_vps
+cd monitor_vps
+
+# buat file config
+nano config.json
+
+# buat program
+nano bot.py
+
+# install library yang dibutuhkan
+pip3 install python-telegram-bot
+
+# jalankan bot
+python3 bot.py
+
