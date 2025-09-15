@@ -1,19 +1,23 @@
-# persiapan
-sudo apt update && sudo apt upgrade -y && sudo apt install python3-pip screen -y
+# 1. Persiapan Server (dijalankan sekali saja)
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt-get install python3-pip screen -y
 
-# buat folder dan masuk
+# 2. Buat direktori dan masuk
 mkdir monitor_vps
 cd monitor_vps
 
-# buat file config
+# 3. Buat file config.json (tempel isi config Anda di sini)
 nano config.json
 
-# buat program
+# 4. Buat file bot.py (tempel kode bot Anda di sini)
 nano bot.py
 
-# install library yang dibutuhkan
-pip3 install python-telegram-bot
+# 5. Instal library yang dibutuhkan (dengan versi yang benar)
+pip3 install "python-telegram-bot[job-queue]"
 
-# jalankan bot
+# 6. Jalankan bot di dalam 'screen' agar tidak mati saat terminal ditutup
+screen -S bot_monitor
+
+# 7. jalankan bot
 python3 bot.py
-
