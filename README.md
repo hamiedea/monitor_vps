@@ -1,5 +1,13 @@
-# monitor-vps
+# MONITOR VPS
+#
+# IMPORTANT
 
+> File `bot.py` dan `config.json` Hanya untuk instalasi **MANUAL**
+
+> File `monitor.sh` Hanya untuk instalassi **OTOMATIS**
+
+#
+# INSTALASI MANUAL
 ## Persiapan
 ``` bash
 sudo apt-get update
@@ -36,11 +44,14 @@ python3 bot.py
 ```
 #
 
-# OTOMATIS
+# INSTALASI OTOMATIS
 
 ## Buat direktori dan masuk
 ``` bash
 mkdir monitor_vps
 cd monitor_vps
 ```
-###
+### Download file
+``` bash
+wget https://raw.githubusercontent.com/hamiedea/monitor_vps/main/monitor.sh
+```
