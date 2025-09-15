@@ -7,6 +7,29 @@
 > File `monitor.sh` Hanya untuk instalassi **OTOMATIS**
 
 #
+
+# INSTALASI OTOMATIS
+
+## Buat direktori dan masuk
+``` bash
+mkdir monitor_vps
+cd monitor_vps
+```
+## Download file
+``` bash
+wget https://raw.githubusercontent.com/hamiedea/monitor_vps/main/monitor.sh
+```
+## Berikan izin eksekusi pada file
+``` bash
+chmod +x monitor.sh
+```
+## Jalankan skrip
+``` bash
+./monitor.sh
+```
+#
+
+
 # INSTALASI MANUAL
 ## Persiapan
 ``` bash
@@ -20,13 +43,21 @@ sudo apt-get install python3-pip screen -y
 mkdir monitor_vps
 cd monitor_vps
 ```
-## Buat file config.json
+## Buat File Config
 ``` bash
 nano config.json
 ```
-## Buat file bot.py
+Copy Dan Masukan Token Bot Anda
 ``` bash
-nano bot.py
+{
+  "BOT_TOKEN": "MASUKAN_TOKEN_BOT_ANDA",
+  "MONITOR_INTERVAL_SECONDS": 120
+}
+```
+
+## Download File Bot nya
+``` bash
+wget https://raw.githubusercontent.com/hamiedea/monitor_vps/main/bot.py
 ``` 
 ## Instal library yang dibutuhkan
 ``` bash
@@ -44,14 +75,3 @@ python3 bot.py
 ```
 #
 
-# INSTALASI OTOMATIS
-
-## Buat direktori dan masuk
-``` bash
-mkdir monitor_vps
-cd monitor_vps
-```
-### Download file
-``` bash
-wget https://raw.githubusercontent.com/hamiedea/monitor_vps/main/monitor.sh
-```
